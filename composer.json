@@ -1,0 +1,21 @@
+{
+    "name": "sokolovandreydev/FormValidation",
+    "description": "PHP Form Validation sample.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sokolov Andrey",
+            "email": "andrewsprog@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "~7.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "sokolovandreydev/FormValidation": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
