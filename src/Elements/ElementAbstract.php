@@ -1,10 +1,10 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Elements;
 
 /**
  * Class ElementAbstract
  * @package sokolovandreydev\FormValidation
  */
-abstract class ElementAbstract implements \sokolovandreydev\FormValidation\ElementInterface {
+abstract class ElementAbstract implements \sokolovandreydev\FormValidation\Elements\ElementInterface {
 
     /**
      * @var null|string

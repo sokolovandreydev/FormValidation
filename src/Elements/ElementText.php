@@ -1,12 +1,11 @@
 <?php namespace sokolovandreydev\FormValidation\Elements;
 
-use \sokolovandreydev\FormValidation\Validators\ValidatorEmail;
 
 /**
- * Class ElementTextEmail
- * @package sokolovandreydev\FormValidation
+ * Class ElementText
+ * @package sokolovandreydev\FormValidation\Elements
  */
-class ElementTextEmail extends ElementText {
+class ElementText extends ElementAbstract {
 
     /**
      * ElementTextEmail constructor.
@@ -15,8 +14,6 @@ class ElementTextEmail extends ElementText {
      */
     public function __construct(string $name, array $validators = [])
     {
-        $validators[] = new ValidatorEmail();
-
         parent::__construct($name, $validators);
     }
 

@@ -4,7 +4,7 @@
  * Class ValidatorNumeric
  * @package sokolovandreydev\FormValidation\Validators
  */
-class ValidatorNumeric extends ValidatorAbstract {
+class ValidatorInteger extends ValidatorAbstract {
 
     /**
      * @param $formData
@@ -12,8 +12,8 @@ class ValidatorNumeric extends ValidatorAbstract {
      */
     public function validate($formData)
     {
-        if (!empty($formData) && !is_numeric($formData)) {
-            $this->_errors[] = "value is not numeric";
+        if (!empty($formData) && !preg_match('/^[0-9]*$/', $formData)) {
+            $this->_errors[] = "value {$formData} is not integer";
         }
 
         return $this->_errors;

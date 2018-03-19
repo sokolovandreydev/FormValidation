@@ -1,9 +1,9 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Forms;
 
 /**
  * Class FormAbstract
  */
-abstract class FormAbstract implements \sokolovandreydev\FormValidation\FormInterface {
+abstract class FormAbstract implements \sokolovandreydev\FormValidation\Forms\FormInterface {
 
     /**
      * @var array
@@ -54,7 +54,7 @@ abstract class FormAbstract implements \sokolovandreydev\FormValidation\FormInte
             $element->setData($elementData);
             $errors = $element->validate();
 
-            $this->_errors = array_merge($this->_errors, $errors);
+            $this->_errors[$element->name] = $errors;
         }
 
         return $this->_errors;

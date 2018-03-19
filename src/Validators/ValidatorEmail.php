@@ -1,4 +1,4 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Validators;
 
 /**
  * Class ValidatorEmail
@@ -12,7 +12,7 @@ class ValidatorEmail extends ValidatorAbstract {
      */
     public function validate($formData)
     {
-        if (!filter_var($formData, FILTER_VALIDATE_EMAIL)) {
+        if (!empty($formData) && !filter_var($formData, FILTER_VALIDATE_EMAIL)) {
             $this->_errors[] = "Invalid email format";
         }
 

@@ -4,7 +4,7 @@
  * Class ValidatorNumeric
  * @package sokolovandreydev\FormValidation\Validators
  */
-class ValidatorNumeric extends ValidatorAbstract {
+class ValidatorPhoneNumber extends ValidatorAbstract {
 
     /**
      * @param $formData
@@ -12,8 +12,8 @@ class ValidatorNumeric extends ValidatorAbstract {
      */
     public function validate($formData)
     {
-        if (!empty($formData) && !is_numeric($formData)) {
-            $this->_errors[] = "value is not numeric";
+        if (!empty($formData) && !preg_match("/^\([0-9]{3}\)\s[0-9]{4}-[0-9]{4}$/", $formData)) {
+            $this->_errors[] = "value should be in the format: (ddd) dddd-dddd";
         }
 
         return $this->_errors;

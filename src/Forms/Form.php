@@ -1,4 +1,4 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Forms;
 
 /**
  * Class Form

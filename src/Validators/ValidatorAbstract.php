@@ -1,10 +1,10 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Validators;
 
 /**
  * Class ValidatorAbstract
  * @package sokolovandreydev\FormValidation
  */
-abstract class ValidatorAbstract implements \sokolovandreydev\FormValidation\ValidatorInterface {
+abstract class ValidatorAbstract implements \sokolovandreydev\FormValidation\Validators\ValidatorInterface {
 
     /**
      * @var array

@@ -1,4 +1,6 @@
-<?php namespace sokolovandreydev\FormValidation;
+<?php namespace sokolovandreydev\FormValidation\Elements;
+
+use \sokolovandreydev\FormValidation\Validators\ValidatorNumeric;
 
 /**
  * Class ElementTextNumber
@@ -8,7 +10,7 @@
  * Class ElementTextNumber
  * @package sokolovandreydev\FormValidation
  */
-class ElementTextNumber extends ElementAbstract {
+class ElementTextNumber extends ElementText {
 
     /**
      * ElementTextNumber constructor.

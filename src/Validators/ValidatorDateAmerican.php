@@ -4,7 +4,7 @@
  * Class ValidatorNumeric
  * @package sokolovandreydev\FormValidation\Validators
  */
-class ValidatorNumeric extends ValidatorAbstract {
+class ValidatorDateAmerican extends ValidatorAbstract {
 
     /**
      * @param $formData
@@ -12,8 +12,8 @@ class ValidatorNumeric extends ValidatorAbstract {
      */
     public function validate($formData)
     {
-        if (!empty($formData) && !is_numeric($formData)) {
-            $this->_errors[] = "value is not numeric";
+        if (!empty($formData) && !preg_match("/^(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-[0-9]{4}$/", $formData)) {
+            $this->_errors[] = "value is not valid date";
         }
 
         return $this->_errors;
